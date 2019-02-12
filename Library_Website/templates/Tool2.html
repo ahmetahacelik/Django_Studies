@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome to our Tool!</h1>
+<p>Please write down the text you want analyzed below</p>
+
+<form action="/Tool/" method="post">
+{% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit Query">
+</form>
+
+
+
+</body>
+</html>

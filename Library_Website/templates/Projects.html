@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+    {% block display %}
+            {% for project in Projects %}
+
+                <div class="info">
+
+                <div>
+                    <p class="tag">Project Name :</p>
+                    <a href="{{ project.Name }}" class="text">{{ project.Name }}</a>
+                </div>
+
+                <div>
+                    <p class="tag">Budjet :</p>
+                    <p class="text">{{ project.Budget}}</p>
+                </div>
+
+                <br>
+
+
+                </div>
+                {% endfor %}
+
+                {% endblock display %}
+
+</body>
+</html>

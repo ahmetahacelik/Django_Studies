@@ -1,0 +1,27 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href={% static "css/main.css" %}>
+
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+
+    <div class="topnav">
+      <a href="/Lab">Home</a>
+      <a href="/Lab/Projects">Projects</a>
+      <a href="/Lab/People">People</a>
+        <a href="/Lab/Blogs">Blogs</a>
+
+
+    </div>
+
+    {% block display %}
+    {% endblock display %}
+
+
+</body>
+</html>

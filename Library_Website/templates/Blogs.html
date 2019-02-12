@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+{% block display %}
+{% for blog in blogs %}
+
+    <h1>{{ blog.Title }} </h1>
+    <h4>{{ blog.Body }}</h4>
+  {% endfor %}
+<form action="/Lab/Blogs/Create">
+
+    <button type="submit" value="">Create New</button>
+</form>
+
+{% endblock display %}
+
+</body>
+</html>

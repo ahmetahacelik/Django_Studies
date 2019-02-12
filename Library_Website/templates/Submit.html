@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+{% block display %}
+<form action="/Lab/Blogs/Create" method="post">
+{% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock display %}
+
+</body>
+</html>

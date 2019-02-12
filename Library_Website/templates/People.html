@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    {% block display %}
+            {% for worker in Workers2 %}
+
+                <div class="info">
+
+                <div>
+                    <p class="tag">First Name :</p>
+                    <a href="{{ worker.FirstName }}_{{ worker.LastName }}" class="text">{{ worker.FirstName }}</a>
+                </div>
+
+                <div>
+                    <p class="tag">Last Name :</p>
+                    <p class="text">{{ worker.LastName}}</p>
+                </div>
+
+                <div>
+                    <p class="tag">Age :</p>
+                    <p class="text">{{ worker.Age}}</p>
+                </div>
+
+
+                <br>
+
+
+                </div>
+                {% endfor %}
+
+                {% endblock display %}
+
+</body>
+</html>

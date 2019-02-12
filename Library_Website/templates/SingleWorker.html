@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Worker Details</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+{% block display %}
+  <h1>Worker Details</h1>
+  
+  <div class="info">
+  
+	<div>
+		<p class="tag">First Name :</p>
+		<p class="text">{{ PersonName.FirstName }}</p>
+	</div>
+	  
+	<div>
+		<p class="tag">Last Name :</p>
+		<p class="text">{{ PersonName.LastName }}</p>
+	</div>
+	    
+	<div>
+		<p class="tag">Age :</p>
+		<p class="text">{{ PersonName.Age }}</p>
+	</div>
+	  
+	  <br>
+	  
+	<div>
+		<p class="tag">Project :</p>
+		<a href="../Projects/{{ PersonName.CurrentProject.Name }}" class="link">{{ PersonName.CurrentProject.Name }}</a>
+	</div>
+	
+  </div>
+  {% endblock display %}
+</body>
+</html>
+			
